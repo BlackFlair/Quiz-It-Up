@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingStart="25dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="25dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/stateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SampleState"
+        tools:textColor="#000000"
+        tools:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/capitalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="italic"
+        tools:text="SampleCapital"
+        tools:textColor="#423B3B"
+        tools:textSize="18sp" />
 
 </LinearLayout>

@@ -28,9 +28,9 @@ public class ListRV extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_rv);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton add = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

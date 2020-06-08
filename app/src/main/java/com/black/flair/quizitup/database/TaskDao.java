@@ -1,4 +1,4 @@
-package com.black.flair.quizitup;
+package com.black.flair.quizitup.database;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,13 +7,15 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import java.util.List;
+import com.black.flair.quizitup.data.TaskEntry;
+
+import javax.sql.DataSource;
 
 @Dao
 public interface TaskDao {
 
-    @Query("SELECT * FROM states")
-    List<TaskEntry> loadAllTasks();
+    @Query("SELECT * FROM States")
+    DataSource.Factory<Integer, TaskEntry> getAllTasks();
 
     @Insert
     void insertTask(TaskEntry taskEntry);
