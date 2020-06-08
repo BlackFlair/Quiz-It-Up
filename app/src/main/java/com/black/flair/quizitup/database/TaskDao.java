@@ -9,7 +9,7 @@ import androidx.room.Update;
 
 import com.black.flair.quizitup.data.TaskEntry;
 
-import javax.sql.DataSource;
+import androidx.paging.DataSource;
 
 @Dao
 public interface TaskDao {
