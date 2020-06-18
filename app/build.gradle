@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.black.flair.quizitup"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -48,4 +48,7 @@ dependencies {
     implementation "androidx.paging:paging-runtime:$paging_version"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    //Work Manager
+    def work_version = '2.3.4'
+    implementation "androidx.work:work-runtime:$work_version"
 }
