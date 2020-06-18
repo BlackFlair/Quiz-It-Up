@@ -11,7 +11,7 @@
         android:id="@+id/settings_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.black.flair.quizitup.SettingsClass"
+        android:name="com.black.flair.quizitup.UI.SettingsClass"
         />
 
 
