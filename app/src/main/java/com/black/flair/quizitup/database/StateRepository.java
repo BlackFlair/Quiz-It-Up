@@ -64,7 +64,7 @@ public class StateRepository {
 
     public LiveData<PagedList<TaskEntry>> getAllStates(){
         return new LivePagedListBuilder<>(
-                mTaskDao.getAllStates(),
+                mTaskDao.getAllTasks(),
                 PAGE_SIZE
         ).build();
     }

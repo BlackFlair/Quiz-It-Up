@@ -1,8 +1,10 @@
-package com.black.flair.quizitup;
+package com.black.flair.quizitup.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.black.flair.quizitup.R;
 
 public class Settings extends AppCompatActivity {
 

@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 @Database(entities = {TaskEntry.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
-    abstract TaskDao taskDao;
+    abstract TaskDao taskDao();
 
     private static AppDatabase INSTANCE = null;
     private static ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -55,7 +55,6 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
-
 
 
     private static void populateFromDB(AssetManager assetManager, TaskDao taskDao){
@@ -93,7 +92,7 @@ public abstract class AppDatabase extends RoomDatabase {
         }
     }
 
-    private static void populateFromJSON(JSONArray states, TaskDao taskdao){
+    private static void populateFromJSON(JSONArray states, TaskDao taskDao){
         try{
             for (int i=0; i<states.length(); i++){
                 JSONObject stateData = states.getJSONObject(i);

@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey;
 public class TaskEntry {
 
     @PrimaryKey(autoGenerate = true)
-    private long stateId;
+    public long stateId;
 
     @NonNull
     @ColumnInfo(name = "State")
@@ -47,6 +47,7 @@ public class TaskEntry {
     }
 
     public String getStateName() {
+
         return stateName;
     }
 
@@ -66,6 +67,7 @@ public class TaskEntry {
     }
 
     public boolean equals(TaskEntry te) {
+
         return (stateName == te.getStateName() && capitalName == te.getCapitalName());
     }
 

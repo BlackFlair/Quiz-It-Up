@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Settings">
+    tools:context=".UI.Settings">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/settings_fragment0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:name="com.black.flair.quizitup.SettingsClass"
         />
 
 

@@ -6,6 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.black.flair.quizitup.R;
 import com.black.flair.quizitup.data.TaskEntry;
 
 public class StateViewHolder extends RecyclerView.ViewHolder {

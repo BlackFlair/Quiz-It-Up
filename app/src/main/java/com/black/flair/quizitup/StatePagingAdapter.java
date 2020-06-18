@@ -12,7 +12,7 @@ import com.black.flair.quizitup.data.TaskEntry;
 
 
 public class StatePagingAdapter extends PagedListAdapter<TaskEntry,StateViewHolder> {
-    protected StatePagingAdapter(); {
+    protected StatePagingAdapter() {
         super(DIFF_CALLBACK);
     }
     private ClickListener clickListener;

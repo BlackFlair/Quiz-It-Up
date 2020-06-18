@@ -1,4 +1,4 @@
-package com.black.flair.quizitup;
+package com.black.flair.quizitup.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.black.flair.quizitup.R;
 
 public class MainActivity extends AppCompatActivity {
 
