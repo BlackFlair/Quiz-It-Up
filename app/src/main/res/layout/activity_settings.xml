@@ -8,7 +8,7 @@
     tools:context=".UI.Settings">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/settings_fragment0"
+        android:id="@+id/settings_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.black.flair.quizitup.SettingsClass"

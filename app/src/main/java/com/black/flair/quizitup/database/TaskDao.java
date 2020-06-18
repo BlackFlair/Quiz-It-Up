@@ -30,10 +30,10 @@ public interface TaskDao {
     @Delete
     void deleteTask(TaskEntry taskEntry);
 
-    @Query("SELECT DISTINCT * FROM State ORDER BY RANDOM() LIMIT 4")
+    @Query("SELECT DISTINCT * FROM States ORDER BY RANDOM() LIMIT 4")
     List<TaskEntry> getQuizStates();
 
-    @Query("SELECT * FROM State ORDER BY RANDOM() LIMIT 1")
+    @Query("SELECT * FROM States ORDER BY RANDOM() LIMIT 1")
     TaskEntry getRandomState();
 
     @RawQuery(observedEntities = TaskEntry.class)
