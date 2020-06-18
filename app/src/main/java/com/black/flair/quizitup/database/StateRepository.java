@@ -2,14 +2,20 @@ package com.black.flair.quizitup.database;
 
 import android.app.Application;
 
+import androidx.annotation.WorkerThread;
 import androidx.lifecycle.LiveData;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
+import androidx.sqlite.db.SimpleSQLiteQuery;
+import androidx.sqlite.db.SupportSQLiteQuery;
 
 import com.black.flair.quizitup.data.TaskEntry;
 
+import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class StateRepository {
 
@@ -67,5 +73,33 @@ public class StateRepository {
                 mTaskDao.getAllTasks(),
                 PAGE_SIZE
         ).build();
+    }
+
+    public Future<List<TaskEntry>> getQuizStates() {
+        Callable<List<TaskEntry>> callable = new Callable<List<TaskEntry>>() {
+            @Override
+            public List<TaskEntry> call() throws Exception {
+                return mTaskDao.getQuizStates();
+            }
+        };
+        return executor.submit(callable);
+    }
+
+    @WorkerThread
+    public TaskEntry getRandomState() {
+        return mTaskDao.getRandomState();
+    }
+
+
+    public LiveData<PagedList<TaskEntry>> getStatesInSortedOrder(String sortOrder){
+        return new LivePagedListBuilder<>(
+                mTaskDao.getSortedStates(constructQuery(sortOrder)),
+                PAGE_SIZE
+        ).build();
+    }
+
+    public SupportSQLiteQuery constructQuery(String sortBy){
+        String query = "SELECT * FROM State ORDER BY "+sortBy+" ASC";
+        return new SimpleSQLiteQuery(query);
     }
 }
